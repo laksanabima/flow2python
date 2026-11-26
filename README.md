@@ -1,84 +1,46 @@
-# Flow2Python
+# Flow2Python Desktop App
+Flow2Python is an educational desktop application that helps learners construct algorithms visually using flowcharts, then view the converted results as Python code. Built with React.js and packaged as a desktop application, it allows users to design algorithmic flows on a canvas, eliminating the need to write all the code manually from scratch.
 
-Flow2Python adalah aplikasi desktop pembelajaran yang membantu mahasiswa menyusun algoritma secara visual menggunakan flowchart, lalu melihat hasil konversinya dalam bentuk kode Python. Aplikasi ini dibuat dengan React.js dan dikemas sebagai aplikasi desktop, sehingga alur algoritma dapat dirancang melalui kanvas tanpa harus langsung menulis seluruh kode secara manual.
+## Download and install on Windows
+The release available in this distribution folder is Flow2Python 1.0.0 for 64-bit Windows. Choose one of the following files:
 
-Menurut saya, nilai utama Flow2Python adalah menjembatani cara berpikir algoritmis dengan sintaks pemrograman. Mahasiswa dapat melihat hubungan antara simbol, alur keputusan, dan kode yang dihasilkan. Aplikasi ini paling cocok digunakan sebagai media latihan dan pendamping pembelajaran—bukan pengganti latihan membaca, memahami, dan menulis kode Python sendiri.
+- Flow2Python Setup 1.0.0.exe — recommended installer. This file is roughly 137 MB.
+- Flow2Python 1.0.0.exe — portable version; run it directly without an installation process.
 
-## Fitur
+## Usage tutorial
+### 1. Creating a flowchart
+- Open Flow2Python. The canvas is in the center, the symbol palette is on the left, and the code panel is on the right.
+- Drag Start onto the canvas to begin the algorithm.
+- Add the needed symbols. For example, use Input to receive data, Process for calculations, Decision for branching, Output to display results, and End to finish the flow.
+- Click a symbol you want to change, then adjust its value in the Properties panel.
+- Connect the connection points between symbols so the flow can be followed. For Decision, connect both branches for true and false conditions, and make sure both lead to the right next step.
+- Adjust the view with the zoom controls or minimap if the diagram is large. Check the validation indicator above the canvas and fix the flow if the diagram is not yet valid.
 
-- **Kanvas flowchart:** susun diagram dengan menyeret simbol dari palet dan menghubungkan titik koneksinya.
-- **Simbol algoritma:** Start, End, Process, Input, Output, Decision, dan Loop.
-- **Konversi ke Python:** panel *Python Code* menampilkan kode berdasarkan flowchart.
-- **Edit properti:** pilih simbol dan gunakan panel *Properties* untuk mengubah isinya.
-- **Jalankan dan lihat hasil:** tombol **Run** menjalankan program dan menampilkan hasil atau pesan di panel **Console**.
-- **Kelola diagram:** buat diagram baru, Undo/Redo, atau mulai dari contoh melalui **Load Example...**.
-- **Simpan dan bagikan:** **Export JSON** menyimpan diagram ke berkas JSON dan **Import JSON** memuatnya kembali.
-- **Gunakan kode di luar aplikasi:** **Copy Python** menyalin kode, sedangkan **Download .py** mengunduhnya sebagai berkas Python.
-- **Navigasi kanvas:** kontrol zoom dan minimap membantu melihat diagram yang besar; tombol tema dapat mengganti tampilan.
+### 2. Viewing and running code
+- Watch the Python Code panel. The code updates based on the flowchart you build.
+- Click Run to execute the program. View messages or results in the Console panel, and enter values when the program asks for input.
+- If the output does not match expectations, recheck symbol values, connections, and decision branch directions, then run again.
 
-## Unduh dan instal di Windows
+### 3. Practice example: checking even or odd numbers
+- Select Load Example... and load the sample if it is available.
+- Follow the algorithm pattern: Start → Input number n → Decision with condition n % 2 == 0.
+- Connect the true branch to the output "Even" (or "Genap" as in the original sample), and the false branch to the output "Odd" (or "Ganjil"). Connect both branches back to End.
+- Inspect the generated code. Conceptually, the condition becomes if n % 2 == 0, producing different outputs for the true and false branches.
+- Click Run, enter a number, and observe the result in Console.
 
-Rilis yang tersedia di folder distribusi ini adalah **Flow2Python 1.0.0** untuk Windows 64-bit. Pilih salah satu berkas berikut:
+### 4. Saving or sharing your work
+- Click Export JSON to save a diagram so you can reopen or continue it later with Import JSON.
+- Click Copy Python to copy the code to the clipboard, or Download .py to save the code as a .py file.
+- JSON files store the diagram to reopen in Flow2Python; .py files contain code to study or run in a Python environment.
 
-- **`Flow2Python Setup 1.0.0.exe`** — installer yang disarankan. Berkas ini berukuran sekitar 137 MB.
-- **`Flow2Python 1.0.0.exe`** — versi portable; jalankan langsung tanpa melalui proses instalasi.
+### 5. Editing a diagram
+- New starts a fresh diagram.
+- Undo reverts the last change, while Redo reapplies a reverted change.
+- Select any symbol on the canvas to edit its properties or rearrange the flow.
 
-### Instalasi dengan installer
-
-1. Unduh `Flow2Python Setup 1.0.0.exe` dari sumber distribusi resmi yang diberikan pengajar atau pembuat aplikasi.
-2. Buka berkas installer. Jika Windows menampilkan konfirmasi keamanan, lanjutkan hanya apabila berkas berasal dari sumber yang tepercaya.
-3. Ikuti langkah-langkah pada jendela instalasi. Anda dapat memilih lokasi pemasangan.
-4. Setelah selesai, buka **Flow2Python** dari shortcut Desktop atau menu Start.
-
-Untuk memakai versi portable, simpan `Flow2Python 1.0.0.exe` di komputer lalu buka berkas tersebut. Jangan menghapus atau memindahkan berkas ketika aplikasi sedang berjalan.
-
-## Tutorial penggunaan
-
-### 1. Membuat flowchart
-
-1. Buka Flow2Python. Kanvas berada di bagian tengah, palet simbol di sebelah kiri, dan panel kode di sebelah kanan.
-2. Seret **Start** ke kanvas sebagai awal algoritma.
-3. Tambahkan simbol yang diperlukan. Contohnya, gunakan **Input** untuk menerima data, **Process** untuk perhitungan, **Decision** untuk percabangan, **Output** untuk menampilkan hasil, dan **End** untuk mengakhiri alur.
-4. Klik simbol yang ingin diubah, lalu sesuaikan nilainya di panel **Properties**.
-5. Hubungkan titik koneksi antarsimbol agar alur dapat diikuti. Untuk **Decision**, hubungkan kedua cabang sesuai kondisi benar dan salah; pastikan keduanya menuju langkah yang tepat.
-6. Atur tampilan dengan kontrol zoom atau minimap bila diagram terlalu besar. Periksa indikator validasi di atas kanvas dan benahi alur jika diagram belum valid.
-
-### 2. Melihat dan menjalankan kode
-
-1. Perhatikan panel **Python Code**. Kode diperbarui berdasarkan flowchart yang dibuat.
-2. Klik **Run** untuk menjalankan program. Lihat pesan atau hasilnya di panel **Console**; masukkan nilai jika program meminta input.
-3. Jika hasil tidak sesuai, periksa kembali nilai pada simbol, sambungan, dan arah cabang keputusan, lalu jalankan lagi.
-
-### 3. Contoh latihan: menentukan bilangan genap atau ganjil
-
-1. Pilih **Load Example...** dan muat contoh yang tersedia, jika contoh tersebut ada.
-2. Ikuti pola algoritma: **Start → Input** bilangan `n` → **Decision** dengan kondisi `n % 2 == 0`.
-3. Hubungkan cabang kondisi benar ke keluaran **"Genap"**, dan cabang salah ke keluaran **"Ganjil"**. Hubungkan kedua cabang kembali ke **End**.
-4. Periksa kode yang tampil. Secara konsep, kondisi tersebut menjadi `if n % 2 == 0`, dengan hasil berbeda untuk cabang benar dan salah.
-5. Klik **Run**, masukkan sebuah bilangan, dan amati hasil di **Console**.
-
-### 4. Menyimpan atau membagikan pekerjaan
-
-- Klik **Export JSON** untuk menyimpan diagram agar bisa dibuka atau dilanjutkan nanti dengan **Import JSON**.
-- Klik **Copy Python** untuk menyalin kode ke clipboard, atau **Download .py** untuk menyimpan kode sebagai berkas `.py`.
-- Berkas JSON menyimpan diagram untuk dibuka kembali di Flow2Python; berkas `.py` berisi kode untuk dipelajari atau digunakan di lingkungan Python.
-
-### 5. Mengedit diagram
-
-- **New** memulai diagram baru.
-- **Undo** membatalkan perubahan terakhir, sedangkan **Redo** mengulangi perubahan yang dibatalkan.
-- Pilih simbol pada kanvas untuk mengedit propertinya atau menyusun ulang alurnya.
-
-## Tips untuk mahasiswa dan pengajar
-
-- Mulai dari algoritma sederhana: urutan langkah, input-output, kemudian percabangan dan perulangan.
-- Pastikan setiap alur memiliki **Start** dan **End**, dan setiap cabang keputusan memiliki tujuan yang jelas.
-- Bandingkan flowchart dengan kode Python, bukan hanya menyalin kode yang dihasilkan. Perhatikan bagaimana kondisi dan urutan proses diterjemahkan.
-- Uji beberapa nilai input, termasuk nilai di batas kondisi, agar cabang yang berbeda ikut diperiksa.
-- Simpan diagram JSON sebagai bahan tugas atau untuk melanjutkan latihan. Bagikan berkas `.py` jika yang dibutuhkan adalah kode hasilnya.
-
-## Catatan rilis
-
-- Versi: **1.0.0**
-- Platform paket saat ini: **Windows 64-bit**
-- Installer menyediakan pilihan lokasi pemasangan serta shortcut Desktop dan menu Start.
+### Tips for students and instructors
+- Start with simple algorithms: sequential steps, input-output, then branching and loops.
+- Make sure every flow has a Start and End, and every decision branch has a clear destination.
+- Compare the flowchart against the Python code rather than just copying what is generated. Notice how conditions and execution order translate.
+- Test multiple input values—including boundary cases—so different branches are checked.
+- Save JSON diagrams for assignments or continued practice. Share .py files when the resulting code is what is needed.
