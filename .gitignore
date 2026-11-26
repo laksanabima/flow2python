@@ -1,0 +1,4 @@
+*.exe
+*.blockmap
+win-unpacked/
+release/

@@ -1,0 +1,23 @@
+directories:
+  output: release
+  buildResources: build
+appId: com.flow2python.app
+productName: Flow2Python
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+electronVersion: 45.4.1
